@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ShabadOS/website#readme",
   "dependencies": {
     "@octokit/types": "^5.5.0",
+    "@react-hook/window-size": "^3.0.7",
     "gatsby": "^2.24.85",
     "gatsby-plugin-better-jss": "^1.0.3",
     "gatsby-plugin-google-fonts": "^1.0.1",
