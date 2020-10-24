@@ -16,5 +16,22 @@ export const globalTheme = {
       background: Colour.white,
       fontFamily: 'Noto Sans',
     },
+    a: {
+      textDecoration: 'none',
+      color: Colour.blue,
+      '&:hover': {
+        color: Colour.white,
+      },
+    },
   },
 }
+
+export enum Breakpoints {
+  mobile = 480,
+  tablet = 768,
+  laptop = 1024,
+}
+
+export const widthMoreThan = ( width:number ) => `@media screen and (min-width: ${width}px)`
+
+export const widthLessThan = ( width:number ) => `@media screen and (max-width: ${width - 1}px)`
