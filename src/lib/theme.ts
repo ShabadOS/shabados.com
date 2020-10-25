@@ -7,14 +7,12 @@ export enum Colour {
   darkPink = '#300519',
   black = '#000000',
 }
-
 export const radialSplash = `radial-gradient(75vw 100vh at 50% 115%, ${Colour.pink}, ${Colour.darkPink} 100%)`
 
 export const globalTheme = {
   '@global': {
     body: {
       background: Colour.white,
-      fontFamily: 'Noto Sans',
     },
     a: {
       textDecoration: 'none',

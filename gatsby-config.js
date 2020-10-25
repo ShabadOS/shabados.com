@@ -38,15 +38,5 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-google-fonts',
-      options: {
-        fonts: [
-          // eslint-disable-next-line no-useless-escape
-          'Noto Sans\:400,700',
-        ],
-        display: 'swap',
-      },
-    },
   ],
 }
