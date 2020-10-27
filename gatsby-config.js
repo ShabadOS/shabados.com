@@ -28,14 +28,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        fonts: [
-          {
-            family: 'Noto Sans',
-            variants: [ '400', '700' ],
-          },
-        ],
+        name: 'fonts',
+        path: `${__dirname}/src/fonts/`,
       },
     },
   ],
