@@ -20,6 +20,7 @@ const useStyles = createUseStyles( {
     padding: 25,
   },
   homeLink: {
+    paddingRight: '1.5rem',
     color: Color.white,
     '&:hover': {
       color: Color.link,
@@ -30,7 +31,8 @@ const useStyles = createUseStyles( {
     height: '1.2rem',
   },
   navItems: {
-    paddingLeft: '3rem',
+    paddingLeft: '1.5rem',
+    paddingRight: '1.5rem',
     color: Color.white,
     '&:hover': {
       color: Color.link,
