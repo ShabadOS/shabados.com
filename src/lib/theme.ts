@@ -1,26 +1,26 @@
-export enum Colour {
+export enum Color {
+  link = '#00a2d5',
+  avaniPink = '#B71E61',
+  avaniPurple = '#300519',
+  avaniPaper = '#F6F3EF',
   white = '#FFFFFF',
-  lightGrey = '#FAF8F7',
-  lightBrown = '#F6F3EF',
-  blue = '#0088BF',
-  pink = '#B71E61',
-  darkPink = '#300519',
+  gray900 = '#FAF8F7',
   black = '#000000',
 }
 
-export const radialSplash = `radial-gradient(75vw 100vh at 50% 115%, ${Colour.pink}, ${Colour.darkPink} 100%)`
+export const radialSplash = `radial-gradient(75vw 100vh at 50% 115%, ${Color.avaniPink}, ${Color.avaniPurple} 100%)`
 
 export const globalTheme = {
   '@global': {
     body: {
-      background: Colour.white,
+      background: Color.white,
       fontFamily: 'Noto Sans',
     },
     a: {
       textDecoration: 'none',
-      color: Colour.blue,
+      color: Color.link,
       '&:hover': {
-        color: Colour.white,
+        color: Color.white,
       },
     },
   },

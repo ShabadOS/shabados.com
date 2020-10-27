@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 import { Link } from 'gatsby'
 import { useWindowWidth } from '@react-hook/window-size'
 
-import { Colour, widthLessThan, Breakpoints } from '../lib/theme'
+import { Color, widthLessThan, Breakpoints } from '../lib/theme'
 
 const NAV_ROUTES = [
   { name: 'About Us', url: '/about' },
@@ -15,14 +15,14 @@ const NAV_ROUTES = [
 
 const useStyles = createUseStyles( {
   navbar: {
-    background: Colour.darkPink,
-    color: Colour.white,
+    background: Color.avaniPurple,
+    color: Color.white,
     padding: 25,
   },
   homeLink: {
-    color: Colour.white,
+    color: Color.white,
     '&:hover': {
-      color: 'yellow',
+      color: Color.link,
     },
   },
   menuButton: {
@@ -31,9 +31,9 @@ const useStyles = createUseStyles( {
   },
   navItems: {
     paddingLeft: '3rem',
-    color: Colour.white,
+    color: Color.white,
     '&:hover': {
-      color: 'yellow',
+      color: Color.link,
     },
     [ widthLessThan( Breakpoints.tablet ) ]: {
       display: 'flex',
