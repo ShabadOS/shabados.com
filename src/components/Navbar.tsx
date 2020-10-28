@@ -10,36 +10,40 @@ const NAV_ROUTES = [
   { name: 'Database', url: '/database' },
   { name: 'Viewer', url: '/viewer' },
   { name: 'Presenter', url: '/presenter' },
-  { name: 'App', url: '/app' },
+  { name: 'Mobile', url: '/mobile' },
 ]
 
 const useStyles = createUseStyles( {
   navbar: {
     background: Color.avaniPurple,
     color: Color.white,
-    padding: 25,
+    display: 'flex',
   },
-  homeLink: {
-    paddingRight: '1.5rem',
-    color: Color.white,
+  navItem: {
+    fontWeight: 'normal',
+    padding: '.6rem.6rem',
+    margin: '.2rem 0.5rem 0',
+    border: `0.15rem solid ${Color.avaniPurple}`,
+    color: 'rgba( 255, 255, 255, 0.85 )',
+    '&.currentItem': {
+      borderBottomColor: `${Color.link}`,
+    },
     '&:hover': {
-      color: Color.link,
+      color: `${Color.white}`,
+    },
+    '&:focus': {
+      borderColor: `${Color.link}`,
+      borderRadius: '0.5rem',
+      backgroundColor: 'rgba(0, 162, 213, .5)',
+      color: `${Color.white}`,
+    },
+    [ widthLessThan( Breakpoints.tablet ) ]: {
+      display: 'flex',
     },
   },
   menuButton: {
     width: '1.2rem',
     height: '1.2rem',
-  },
-  navItems: {
-    paddingLeft: '1.5rem',
-    paddingRight: '1.5rem',
-    color: Color.white,
-    '&:hover': {
-      color: Color.link,
-    },
-    [ widthLessThan( Breakpoints.tablet ) ]: {
-      display: 'flex',
-    },
   },
 } )
 
@@ -73,10 +77,12 @@ const Navbar = () => {
 
   return (
     <nav className={classes.navbar}>
-      <MenuSwitch toggle={toggleSwitch} />
-      <Link to="/" className={classes.homeLink}>Shabad OS</Link>
+      <Link to="/" className={[ classes.homeLink, classes.navItem ].join( ' ' )}>
+        <MenuSwitch toggle={toggleSwitch} />
+        Shabad OS
+      </Link>
       {NAV_ROUTES.map( ( { name, url } ) => (
-        <Link className={classes.navItems} to={url} key={url}>
+        <Link className={classes.navItem} to={url} key={url}>
           {name}
         </Link>
       ) )}
