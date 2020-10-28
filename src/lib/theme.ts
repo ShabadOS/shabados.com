@@ -1,10 +1,11 @@
 export enum Color {
   link = '#00a2d5',
-  avaniPink = '#B71E61',
+  linkHover ='#0088bf',
+  avaniPink = '#b71e61',
   avaniPurple = '#300519',
-  avaniPaper = '#F6F3EF',
-  white = '#FFFFFF',
-  gray900 = '#FAF8F7',
+  avaniPaper = '#f6f3ef',
+  white = '#ffffff',
+  gray900 = '#faf8f7',
   black = '#000000',
 }
 
@@ -12,15 +13,17 @@ export const radialSplash = `radial-gradient(75vw 100vh at 50% 115%, ${Color.ava
 
 export const globalTheme = {
   '@global': {
-    body: {
-      background: Color.white,
+    html: {
       fontFamily: 'Noto Sans',
+      fontSize: 14,
+      lineHeght: 44,
     },
     a: {
+      fontWeight: 'bold',
       textDecoration: 'none',
       color: Color.link,
       '&:hover': {
-        color: Color.white,
+        color: Color.linkHover,
       },
     },
   },
