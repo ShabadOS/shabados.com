@@ -15,10 +15,15 @@ export const globalTheme = {
   '@global': {
     html: {
       fontFamily: 'Noto Sans',
-      fontSize: 14,
-      lineHeght: 44,
+      fontSize: 16,
+      lineHeight: '1.6rem',
+    },
+    body: {
+      fontSize: '0.875rem',
     },
     a: {
+      outlineStyle: 'none',
+      outlineWidth: 0,
       fontWeight: 'bold',
       textDecoration: 'none',
       color: Color.link,
