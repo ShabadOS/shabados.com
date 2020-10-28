@@ -77,7 +77,7 @@ const Navbar = () => {
 
   return (
     <nav className={classes.navbar}>
-      <Link to="/" className={[ classes.homeLink, classes.navItem ].join( ' ' )}>
+      <Link to="/" className={classes.navItem}>
         <MenuSwitch toggle={toggleSwitch} />
         Shabad OS
       </Link>
