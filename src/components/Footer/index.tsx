@@ -6,7 +6,7 @@ import { Breakpoints, Color, focusRing, widthLessThan, widthMoreThan } from '../
 import Link from '../Link'
 import useToggle from '../../hooks/use-toggle'
 
-import { LINKS } from './consts'
+import { LINKS, SOCIAL } from './consts'
 import Expand from './Expand'
 
 const useStyles = createUseStyles( {
@@ -17,7 +17,33 @@ const useStyles = createUseStyles( {
     padding: '0.6rem 2rem',
   },
   header: {
-
+    display: 'flex',
+    alignContent: 'center',
+    padding: '0.6rem 0',
+    '& a': {
+      color: Color.black,
+      display: 'flex',
+      justifyContent: 'center',
+      padding: '0 0.1rem',
+      '& :hover': {
+        color: Color.black,
+        opacity: '85%',
+      },
+      marginLeft: '0.4rem',
+      '& > svg ': {
+        height: '1.5rem',
+        width: '1.5rem',
+      },
+      ...focusRing( 'inherit', '0' ),
+    },
+    [ widthLessThan( Breakpoints.tablet ) ]: {
+      '& > span': {
+        display: 'none',
+      },
+      '& > a:first-of-type': {
+        marginLeft: 0,
+      },
+    },
   },
   footer: {
     display: 'grid',
@@ -32,7 +58,7 @@ const useStyles = createUseStyles( {
         '&:hover': {
           color: Color.linkHover,
         },
-        ...focusRing,
+        ...focusRing(),
         padding: '0 0.2rem',
       },
       '& strong': {
@@ -108,10 +134,19 @@ const Footer = () => {
 
   return (
     <footer className={classes.main}>
+
       <div className={classes.header}>
-        Follow us on:
+        <span>Follow us on:</span>
+
+        {SOCIAL.map( ( { url, icon: Icon } ) => (
+          <Link to={url} key={url}>
+            <Icon />
+          </Link>
+        ) ) }
       </div>
+
       <FooterNav />
+
     </footer>
   )
 }

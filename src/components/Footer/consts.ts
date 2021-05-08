@@ -1,3 +1,6 @@
+import { FiInstagram } from 'react-icons/fi'
+import { FaTwitter, FaYoutube } from 'react-icons/fa'
+
 export const LINKS = [
   [
     {
@@ -85,4 +88,10 @@ export const LINKS = [
       ],
     },
   ],
+]
+
+export const SOCIAL = [
+  { url: 'https://www.instagram.com/shabad_os/', icon: FiInstagram },
+  { url: 'https://twitter.com/shabad_os', icon: FaTwitter },
+  { url: 'https://www.youtube.com/channel/UCi8UjVV2Lz8H8J2Cka6iVsA', icon: FaYoutube },
 ]
