@@ -1,7 +1,7 @@
 export const LINKS = [
   [
     {
-      name: 'Products',
+      label: 'Products',
       links: [
         { name: 'Database', url: '/database' },
         { name: 'Viewer', url: '/viewer' },
@@ -12,7 +12,7 @@ export const LINKS = [
       ],
     },
     {
-      name: 'Stories',
+      label: 'Stories',
       links: [
         { name: 'Basics of Sikhi', url: '/stories/basics-of-sikhi' },
         { name: 'Sikh Inside (Livestream)', url: '/stories/sikh-inside-livestream' },
@@ -25,14 +25,14 @@ export const LINKS = [
   ],
   [
     {
-      name: 'For Gurudwaras',
+      label: 'For Gurudwaras',
       links: [
         { name: 'Shabad OS in Gurudwaras', url: '/gurdwaras' },
         { name: 'Live Streaming', url: '/gurdwaras/livestreaming' },
       ],
     },
     {
-      name: 'For Education',
+      label: 'For Education',
       links: [
         { name: 'Shabad OS and Education', url: '/education' },
         { name: 'Camp Workshops', url: '/education/workshops' },
@@ -40,7 +40,7 @@ export const LINKS = [
       ],
     },
     {
-      name: 'For Research',
+      label: 'For Research',
       links: [
         { name: 'Shabad OS for Researcher', url: '/researchers' },
         { name: 'Translations', url: '/translations' },
@@ -49,11 +49,10 @@ export const LINKS = [
   ],
   [
     {
-      name: 'Contribute',
+      label: 'Contribute',
       links: [
         { name: 'GitHub', url: 'https://git.shabados.com' },
         { name: 'Code of Conduct', url: 'https://docs.shabados.com/community/#code-of-conduct' },
-        { name: 'Software Principles', url: '/TODO' },
         { name: 'Workflow', url: 'https://docs.shabados.com/community/how-to-contribute#workflow' },
         { name: 'Coding Guidelines', url: 'https://docs.shabados.com/community/coding-guidelines' },
         { name: 'Project Management', url: 'https://docs.shabados.com/community/project-management' },
@@ -62,7 +61,7 @@ export const LINKS = [
   ],
   [
     {
-      name: 'Commitments',
+      label: 'Commitments',
       links: [
         { name: 'Open Source', url: '/commitments/open-source' },
         { name: 'Non-Profit', url: '/commitments/non-profit' },
@@ -75,7 +74,7 @@ export const LINKS = [
   ],
   [
     {
-      name: 'About Us',
+      label: 'About Us',
       links: [
         { name: 'Name & Mission', url: '/about' },
         { name: 'Our Team & Leadership', url: '/about/team' },
