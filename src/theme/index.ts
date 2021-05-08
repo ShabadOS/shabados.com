@@ -8,6 +8,7 @@ export enum Color {
   gray900 = '#faf8f7',
   black = '#000000',
   black200 = 'rgba(0,0,0,0.2)',
+  aqua200 = 'rgba(0, 162, 213, .5)',
 }
 
 export const radialSplash = `radial-gradient(75vw 100vh at 50% 115%, ${Color.avaniPink}, ${Color.avaniPurple} 100%)`
@@ -44,14 +45,14 @@ export enum Breakpoints {
   laptop = 1024,
 }
 
-export const focusRing = {
+export const focusRing = ( color = 'inherit', borderRadius = '0.5rem' ) => ( {
   '&:focus': {
-    borderColor: `${Color.link}`,
-    borderRadius: '0.5rem',
-    backgroundColor: 'rgba(0, 162, 213, .5)',
-    color: `${Color.white}`,
+    borderColor: Color.link,
+    borderRadius,
+    backgroundColor: Color.aqua200,
+    color,
   },
-}
+} )
 
 export const widthMoreThan = ( width:number ) => `@media screen and (min-width: ${width}px)`
 

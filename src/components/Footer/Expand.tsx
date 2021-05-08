@@ -10,7 +10,7 @@ const useStyles = createUseStyles( {
     backgroundColor: 'transparent',
     borderColor: 'transparent',
     cursor: 'pointer',
-    ...focusRing,
+    ...focusRing(),
   },
   expandIcon: {
     height: 15,
