@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { useWindowWidth } from '@react-hook/window-size'
 import { Cross as Hamburger } from 'hamburger-react'
 
-import { Color, widthLessThan, Breakpoints, widthMoreThan } from '../theme'
+import { Color, widthLessThan, Breakpoints, widthMoreThan, focusRing } from '../theme'
 
 import Logo from './Logo'
 
@@ -40,12 +40,7 @@ const useStyles = createUseStyles( {
     '&:hover': {
       color: `${Color.white}`,
     },
-    '&:focus': {
-      borderColor: `${Color.link}`,
-      borderRadius: '0.5rem',
-      backgroundColor: 'rgba(0, 162, 213, .5)',
-      color: `${Color.white}`,
-    },
+    ...focusRing,
     [ widthLessThan( Breakpoints.tablet ) ]: {
       '& > span': {
         display: 'none',

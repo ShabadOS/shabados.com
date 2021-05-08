@@ -43,6 +43,15 @@ export enum Breakpoints {
   laptop = 1024,
 }
 
+export const focusRing = {
+  '&:focus': {
+    borderColor: `${Color.link}`,
+    borderRadius: '0.5rem',
+    backgroundColor: 'rgba(0, 162, 213, .5)',
+    color: `${Color.white}`,
+  },
+}
+
 export const widthMoreThan = ( width:number ) => `@media screen and (min-width: ${width}px)`
 
 export const widthLessThan = ( width:number ) => `@media screen and (max-width: ${width - 1}px)`
