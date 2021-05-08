@@ -39,6 +39,12 @@ const useStyles = createUseStyles( {
         fontWeight: 'normal',
         fontSize: '1rem',
       },
+      [ widthLessThan( Breakpoints.tablet ) ]: {
+        borderColor: Color.black200,
+        borderTopStyle: 'solid',
+        borderTop: 1,
+        padding: '0.6rem 0',
+      },
     },
     'grid-template-columns': '1fr 1fr 1fr 1fr 1fr',
     'grid-template-rows': '1fr',

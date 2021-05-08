@@ -7,6 +7,7 @@ export enum Color {
   white = '#ffffff',
   gray900 = '#faf8f7',
   black = '#000000',
+  black200 = 'rgba(0,0,0,0.2)',
 }
 
 export const radialSplash = `radial-gradient(75vw 100vh at 50% 115%, ${Color.avaniPink}, ${Color.avaniPurple} 100%)`

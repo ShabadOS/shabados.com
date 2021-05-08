@@ -13,7 +13,7 @@ const useStyles = createUseStyles( {
     ...focusRing,
   },
   expandIcon: {
-    height: 20,
+    height: 15,
   },
 } )
 
