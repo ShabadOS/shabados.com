@@ -89,6 +89,16 @@ const useStyles = createUseStyles( {
       display: 'none',
     },
   },
+  sponsors: {
+    display: 'flex',
+    justifyContent: 'center',
+    [ widthLessThan( Breakpoints.tablet ) ]: {
+      borderColor: Color.black200,
+      borderTopStyle: 'solid',
+      borderTopWidth: 1,
+      padding: '0.6rem 0',
+    },
+  },
 } )
 
 type NavSectionProps= {
@@ -146,6 +156,12 @@ const Footer = () => {
       </div>
 
       <FooterNav />
+
+      <div className={classes.sponsors}>
+        <Link to="https://vercel.com/?utm_source=ShabadOS&utm_campaign=oss">
+          <img width={125} alt="Powered by Vercel" src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" />
+        </Link>
+      </div>
 
     </footer>
   )
