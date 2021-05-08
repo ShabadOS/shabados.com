@@ -26,6 +26,14 @@ export const globalTheme = {
     '*': {
       boxSizing: 'border-box',
     },
+    '#gatsby-focus-wrapper': {
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      '& > main': {
+        flexGrow: 1,
+      },
+    },
     a: {
       outlineStyle: 'none',
       outlineWidth: 0,
