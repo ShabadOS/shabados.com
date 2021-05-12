@@ -15,6 +15,10 @@ const useStyles = createUseStyles( {
     flexDirection: 'column',
     backgroundColor: Color.avaniPaper,
     padding: '0.6rem 2rem',
+    [ widthLessThan( Breakpoints.tablet ) ]: {
+      paddingLeft: '1rem',
+      paddingRight: '1rem',
+    },
   },
   header: {
     display: 'flex',
