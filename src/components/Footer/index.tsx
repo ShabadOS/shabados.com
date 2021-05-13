@@ -29,15 +29,12 @@ const useStyles = createUseStyles( {
       display: 'flex',
       justifyContent: 'center',
       padding: '0 0.1rem',
+      alignItems: 'center',
       '& :hover': {
         color: Color.black,
         opacity: '85%',
       },
       marginLeft: '0.4rem',
-      '& > svg ': {
-        height: '1.5rem',
-        width: '1.5rem',
-      },
       ...focusRing( 'inherit', '0' ),
     },
     [ widthLessThan( Breakpoints.tablet ) ]: {
