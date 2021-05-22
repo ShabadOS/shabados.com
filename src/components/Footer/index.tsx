@@ -30,9 +30,9 @@ const useStyles = createUseStyles( {
       justifyContent: 'center',
       padding: '0 0.1rem',
       alignItems: 'center',
-      '& :hover': {
+      '&:hover': {
         color: Color.black,
-        opacity: '85%',
+        opacity: '60%',
       },
       marginLeft: '0.4rem',
       ...focusRing( 'inherit', '0' ),
